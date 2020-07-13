@@ -1,0 +1,22 @@
+{
+  "presets": ["next/babel", "@zeit/next-typescript/babel"],
+  "plugins": [
+    // 1.可以使用装饰器decorator @babel/plugin-proposal-decorators 这个插件
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    //yarn add @zeit/next-css @zeit/next-less less
+    // yarn add babel-plugin-import   这些安装之后可以配置less配置+按需加载
+    // 按需加载并且可以使用less的配置
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "style": "css"
+      }
+    ]
+  ]
+}
