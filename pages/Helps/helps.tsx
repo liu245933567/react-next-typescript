@@ -55,7 +55,7 @@ export default class Helps extends React.Component<{hlist:any}> {
             })}
           </ul>
         </div>
-        <style>{`
+        <style jsx>{`
           #helpspage {
             display: flex;
             justify-content: center;

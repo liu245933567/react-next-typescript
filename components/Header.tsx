@@ -1,13 +1,12 @@
-// components/Header.tsx
 import Link from 'next/link';
 import React from 'react';
-const Header: React.FC<{ active: string }> = (props:{ active: string }) => {
+const Header: React.FC<{ active: string }> = (props: { active: string }) => {
   return (
-    <div>
+    <div className="Header-Components-Wrapper">
       <div className="header">
         <div className="header-inner">
           <Link href="/">
-            <h2 style={{ cursor: 'pointer' }} className="logo">
+            <h2 className="logo">
               ShaoHua
             </h2>
           </Link>
@@ -39,43 +38,6 @@ const Header: React.FC<{ active: string }> = (props:{ active: string }) => {
           </div>
         </div>
       </div>
-      <style>
-        {`
-       .header {
-         width: 100%;
-         border-bottom: 1px solid #eee;
-         padding: 0 70px;
-         box-sizing: border-box
-       }
-       .header .header-inner {
-         width: 100%;
-         box-sizing: border-box;
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         height: 50px;
-       }
-       .logo {
-         font-size: 32;
-       }
-       .nav-bar {
-         display: flex;
-         aligin-items: center
-       }
-       .nav-bar .bar {
-         padding: 0 10px;
-         height: 50px;
-         line-height: 50px;
-         text-align: center;
-         font-size: 13px;
-         color: #555555;
-         cursor: pointer
-       }
-       .nav-bar .bar:hover {
-         color: #0099cc
-       }
-     `}
-      </style>
     </div>
   );
 };

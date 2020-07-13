@@ -9,6 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "antd": "^4.4.2",
     "cowsay-browser": "^1.1.8",
     "next": "^9.4.4",
     "react": "^16.13.1",

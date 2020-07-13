@@ -1,0 +1,41 @@
+.Header-Components-Wrapper {
+  .header {
+    width: 1200px;
+    border-bottom: 1px solid #eee;
+    margin: auto;
+    box-sizing: border-box;
+    .header-inner {
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 50px;
+      line-height: 50px;
+      h2{
+        cursor: pointer;
+        margin: 0;
+      }
+    }
+  }
+  
+  .logo {
+    font-size: 32;
+  }
+  .nav-bar {
+    display: flex;
+    align-items: center;
+  }
+  .nav-bar .bar {
+    padding: 0 10px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 13px;
+    color: #555555;
+    cursor: pointer;
+  }
+  .nav-bar .bar:hover {
+    color: #0099cc;
+  }
+}

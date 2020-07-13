@@ -1,5 +1,5 @@
 {
-  "presets": ["next/babel", "@zeit/next-typescript/babel"],
+  "presets": ["next/babel"],
   "plugins": [
     // 1.可以使用装饰器decorator @babel/plugin-proposal-decorators 这个插件
     [

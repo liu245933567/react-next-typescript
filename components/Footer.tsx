@@ -9,7 +9,7 @@ const Footer = () => {
           Copyright © 2018-∞ WWW.GETLAID.CN All Rights Reserved 版权归YoPo所有
         </div>
       </div>
-      <style>{`
+      <style jsx>{`
        .footer {
          width: 100%;
          padding: 0 70px;

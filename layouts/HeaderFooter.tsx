@@ -15,15 +15,13 @@ const HeaderFooter: React.FC<{
       <Header active={props.active}></Header>
       <div id="LayoutContainer">{props.children}</div>
       <Footer></Footer>
-      <style>{`
+      {/* <style jsx>
+        {' '}
+        {`
         #LayoutContainer {
           min-height: 600px;
           background-color: #f7f7f7
         }
-      `}</style>
-      <style global jsx>
-        {' '}
-        {`
           * {
             margin: 0;
             padding: 0;
@@ -32,7 +30,7 @@ const HeaderFooter: React.FC<{
             list-style: none;
           }
         `}
-      </style>
+      </style> */}
     </div>
   );
 };
