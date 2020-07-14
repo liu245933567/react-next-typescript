@@ -1,5 +1,6 @@
 const withCss = require('@zeit/next-css');
 const withSass = require('@zeit/next-sass');
+const path = require('path');
 // const withLess = require('@zeit/next-less');//需要使用less不实用scss的大佬,把withSass替换成withSass即可,如果都需要就都引入
 // const withTypescript = require('@zeit/next-typescript');//引入typescript,让next解析
 const withPlugins = require('next-compose-plugins/lib');//结合sass css
@@ -25,6 +26,10 @@ module.exports = withPlugins([withSass, withCss], {
         test: antStyles,
         use: 'null-loader'
       });
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        '@components': path.resolve(__dirname, './components')
+      };
     }
     return config;
   }
