@@ -1,11 +1,14 @@
 module.exports = {
   extends: [
+    'prettier',
     'eslint:recommended',
-    'plugin:react/recommended'
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/eslint-recommended'
   ],
   parserOptions: {
     'ecmaVersion': 2019,
-    'sourceType': 'module'
+    'sourceType': 'module',
+    'project': './tsconfig.json'
   },
   env: {
     node: true,
@@ -13,10 +16,11 @@ module.exports = {
     commonjs: true,
     es6: true
   },
-  parser: '@typescript-eslint/parser',
+  // parser: '@typescript-eslint/parser',
   plugins: [
     '@typescript-eslint',
-    'react-hooks'
+    'react-hooks',
+    'prettier'
   ],
   globals: {
     // 这里填入你的项目需要的全局变量
@@ -26,8 +30,8 @@ module.exports = {
   },
   settings: {
     react: {
-        pragma: 'React',
-        version: 'detect'
+      pragma: 'React',
+      version: 'detect'
     }
   },
   rules: {

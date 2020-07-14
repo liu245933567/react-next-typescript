@@ -2,7 +2,7 @@ import React from 'react';
 import HeaderFooter from '../../layouts/HeaderFooter';
 import Link from 'next/link';
 
-export default class Helps extends React.Component<{hlist:any}> {
+export default class Helps extends React.Component<{ hlist: any }> {
   constructor(props) {
     super(props);
   }
@@ -61,7 +61,7 @@ export default class Helps extends React.Component<{hlist:any}> {
             justify-content: center;
             align-items: center;
             height: 600px;
-            width: 100%
+            width: 100%;
           }
         `}</style>
       </HeaderFooter>
