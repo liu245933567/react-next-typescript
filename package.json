@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p 3002"
   },
   "dependencies": {
     "antd": "^4.4.2",
@@ -33,6 +33,7 @@
     "eslint-plugin-react-hooks": "^4.0.7",
     "next-compose-plugins": "^2.2.0",
     "node-sass": "^4.14.1",
+    "null-loader": "^4.0.0",
     "prettier": "^2.0.5",
     "prettier-eslint": "^11.0.0",
     "typescript": "^3.9.6"
