@@ -4,13 +4,14 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 8002",
     "build": "next build",
     "start": "next start -p 3002"
   },
   "dependencies": {
     "antd": "^4.4.2",
     "cowsay-browser": "^1.1.8",
+    "isomorphic-unfetch": "^3.0.0",
     "next": "^9.4.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"

@@ -9,7 +9,7 @@ const Header: React.FC<{ active: string }> = (props: { active: string }) => {
             <h2 className="logo">ShaoHua</h2>
           </Link>
           <div className="nav-bar">
-            <Link href="/Home/home">
+            <Link href="/">
               <div
                 className="bar"
                 style={props.active === 'home' ? { color: '#09c' } : {}}
