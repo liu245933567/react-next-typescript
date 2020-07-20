@@ -7,10 +7,6 @@ export default class Helps extends React.Component<{ hlist: any }> {
   constructor(props) {
     super(props);
   }
-  static async getInitialProps({ req }) {
-    const userAgent = req ? req.headers['user-agent'] : navigator.userAgent
-    return { userAgent }
-  }
   render() {
     return (
       <HeaderFooter active="aboutus">
@@ -21,7 +17,7 @@ export default class Helps extends React.Component<{ hlist: any }> {
             content="initial-scale=1.0, width=device-width"
           />
         </Head>
-        <Empty description={this.props.userAgent} />
+        <Empty description='随便说点啥~' />
       </HeaderFooter>
     );
   }

@@ -39,7 +39,13 @@ class SelfFetch {
       fetch(url, {
         headers: {
           Authorization: `Bearer ${token}`,
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Credentials': 'true',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods':
+            'GET, POST, PATCH, DELETE, PUT, OPTIONS',
+          'Access-Control-Allow-Headers':
+            'Content-Type, Authorization, X-Requested-With, Access-Control-Allow-Origin, access-control-allow-credentials'
         },
         method: 'POST',
         body: JSON.stringify(options)
