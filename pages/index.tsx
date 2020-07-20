@@ -5,10 +5,12 @@ import ScenicList from '@components/ScenicList';
 import Swipe from '@components/Swipe';
 import service from '../service/featch';
 // import { autobind } from 'core-decorators';
+import '@styles/container/Home.scss';
 
-class Home extends React.Component {
+type IProps = Api.HomeInfo;
+class Home extends React.Component<IProps> {
   static async getInitialProps() {
-    const data: Api.HomeInfo = await service.post(
+    const data: Api.HomeInfoRes = await service.post(
       'http://dev.yanyuge.xyz:3000/sport/homeInfo.json'
     );
     if(data.isOk && data.result){
@@ -28,8 +30,8 @@ class Home extends React.Component {
           />
         </Head>
         <HeaderFooter active="home">
-          <div id="homepage">
-            <Swipe />
+          <div className="Home-Page-Wrapper">
+            <Swipe swipes={this.props.swipe}/>
             <div className="content-wrapper">
               <ScenicList />
             </div>

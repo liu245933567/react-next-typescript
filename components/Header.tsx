@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
+import '@styles/components/Header.scss';
+
 const Header: React.FC<{ active: string }> = (props: { active: string }) => {
   return (
     <div className="Header-Components-Wrapper">
