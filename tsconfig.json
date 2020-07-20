@@ -29,6 +29,7 @@
       "@config/*": ["config/*"],
       "@utils/*": ["utils/*"],
       "@components/*": ["components/*"],
+      "@layouts/*": ["layouts/*"],
       "@pages/*": ["pages/*"],
       "@images/*": ["static/images/*"],
       "@icons/*": ["static/icons/*"],

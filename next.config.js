@@ -28,7 +28,10 @@ module.exports = withPlugins([withSass, withCss], {
       });
       config.resolve.alias = {
         ...config.resolve.alias,
-        '@components': path.resolve(__dirname, './components')
+        '@components': path.resolve(__dirname, './components'),
+        '@layouts': path.resolve(__dirname, './layouts'),
+        '@styles': path.resolve(__dirname, './static/styles'),
+        '@images': path.resolve(__dirname, './static/images')
       };
     }
     return config;
