@@ -1,7 +1,7 @@
-// layouts/HeaderFooter.tsx
 import React from 'react';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
+import '@styles/components/Layout.scss';
 
 const HeaderFooter: React.FC<{
   active: string;

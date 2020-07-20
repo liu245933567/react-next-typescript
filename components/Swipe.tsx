@@ -1,5 +1,6 @@
 import React from 'react';
 import { Carousel } from 'antd';
+import '@styles/components/Swipe.scss';
 
 const Swipe = () => {
   const data = [

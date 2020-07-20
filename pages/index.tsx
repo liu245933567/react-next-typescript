@@ -3,12 +3,19 @@ import HeaderFooter from '../layouts/HeaderFooter';
 import Head from 'next/head';
 import ScenicList from '@components/ScenicList';
 import Swipe from '@components/Swipe';
-import '../static/styles/index.scss';
+import service from '../service/featch';
+// import { autobind } from 'core-decorators';
 
 class Home extends React.Component {
-  static async getInitialProps({ req }) {
-    const userAgent = req ? req.headers['user-agent'] : navigator.userAgent
-    return { userAgent }
+  static async getInitialProps() {
+    const data: Api.HomeInfo = await service.post(
+      'http://dev.yanyuge.xyz:3000/sport/homeInfo.json'
+    );
+    if(data.isOk && data.result){
+      return { ...data.result };
+    } else {
+      return {}
+    }
   }
   render() {
     return (
@@ -21,15 +28,13 @@ class Home extends React.Component {
           />
         </Head>
         <HeaderFooter active="home">
-        <div id="homepage">
-          <Swipe />
-          <div className="content-wrapper">
-            <ScenicList />
-            {this.props.userAgent}
+          <div id="homepage">
+            <Swipe />
+            <div className="content-wrapper">
+              <ScenicList />
+            </div>
           </div>
-        </div>
-      </HeaderFooter>
-        {/* hello nextjs */}
+        </HeaderFooter>
       </div>
     );
   }
