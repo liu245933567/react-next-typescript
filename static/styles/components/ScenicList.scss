@@ -1,0 +1,48 @@
+.ScenicList-Component-Wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  .Scenic-Item-Wrapper{
+    width: 33.3%;
+    padding: 0 20px 20px 20px;
+    .Scenic-Item {
+      width: 100%;
+      .Scenic-Item-Content {
+        .Scenic-categorys {
+          a {
+            color: inherit;
+            font-size: inherit;
+            cursor: pointer;
+            text-decoration: none;
+            -ms-word-break: break-all;
+            word-break: normal;
+            word-wrap: break-word;
+            text-decoration: none;
+            transition: all 0.15s ease-out;
+            line-height: 12px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin: 0 10px 3px 0;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+        .Scenic-name {
+          font-size: 22px;
+          font-weight: bold;
+          line-height: 1.2em;
+          color: #a8a8a8;
+          margin-top: 10px;
+          &:hover{
+            color: inherit;
+          }
+        }
+      }
+    }
+  }
+  
+  .ant-card-body {
+    padding: 12px;
+  }
+}

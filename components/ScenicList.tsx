@@ -1,51 +1,33 @@
 import React from 'react';
 import { Card } from 'antd';
+import '@styles/components/ScenicList.scss';
 
-const ScenicList = () => {
-  const data = [
-    {
-      /** 作品名称 */
-      name: '印度南迪亚尔，巴拉吉神庙 / Sameep Padora & Associates',
-      /** 作品链接 */
-      href: '/work/expmale',
-      /** 作品类型 */
-      type: {
-        text: '景观',
-        href: '/work/expmale'
-      },
-      /** 作品分类 */
-      category: {
-        text: '纪念性空间',
-        href: '/work/expmale'
-      },
-      /** 作品地区 */
-      region: {
-        text: '墨西哥',
-        href: '/work/expmale'
-      },
-      /** 作者 */
-      author: {
-        text: 'JIM STUDIO',
-        href: '/work/expmale'
-      }
-    }
-  ];
+type IProps = {
+  /** 推荐作品集合 */
+  recommends: Api.RecommendItem[];
+};
+
+const ScenicList: React.FC<IProps> = ({ recommends = [] }: IProps) => {
   return (
     <div className="ScenicList-Component-Wrapper">
-      {data.map((work) => (
-        <Card
-          key={work.name}
-          hoverable
-          style={{ width: 240 }}
-          cover={
-            <img
-              alt={work.name}
-              src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-            />
-          }
-        >
-          <Card.Meta title={work.name} description={work.name} />
-        </Card>
+      {recommends.map((work, index) => (
+        <div className="Scenic-Item-Wrapper" key={work.name + index}>
+          <Card
+            hoverable
+            className="Scenic-Item"
+            cover={<img alt={work.name} src={work.coverImage} />}
+          >
+            <div className="Scenic-Item-Content">
+              <div className="Scenic-categorys">
+                <a href={work.type.href}>{work.type.text}</a>
+                <a href={work.region.href}>{work.region.text}</a>
+                <a href={work.category.href}>{work.category.text}</a>
+                <a href={work.author.href}>{work.author.text}</a>
+              </div>
+              <div className="Scenic-name">{work.name}</div>
+            </div>
+          </Card>
+        </div>
       ))}
     </div>
   );

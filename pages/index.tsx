@@ -13,10 +13,10 @@ class Home extends React.Component<IProps> {
     const data: Api.HomeInfoRes = await service.post(
       'http://dev.yanyuge.xyz:3000/sport/homeInfo.json'
     );
-    if(data.isOk && data.result){
+    if (data.isOk && data.result) {
       return { ...data.result };
     } else {
-      return {}
+      return {};
     }
   }
   render() {
@@ -31,9 +31,9 @@ class Home extends React.Component<IProps> {
         </Head>
         <HeaderFooter active="home">
           <div className="Home-Page-Wrapper">
-            <Swipe swipes={this.props.swipe}/>
+            <Swipe swipes={this.props.swipe} />
             <div className="content-wrapper">
-              <ScenicList />
+              <ScenicList recommends={this.props.recommends} />
             </div>
           </div>
         </HeaderFooter>

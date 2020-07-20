@@ -19,7 +19,7 @@ const Header: React.FC<{ active: string }> = (props: { active: string }) => {
                 首页
               </div>
             </Link>
-            <Link href="/Aboutus/aboutus">
+            <Link href="/aboutus">
               <div
                 className="bar"
                 style={props.active === 'aboutus' ? { color: '#09c' } : {}}
@@ -27,7 +27,7 @@ const Header: React.FC<{ active: string }> = (props: { active: string }) => {
                 关于我们
               </div>
             </Link>
-            <Link href="/Helps/helps">
+            <Link href="/helps">
               <div
                 className="bar"
                 style={props.active === 'helps' ? { color: '#09c' } : {}}

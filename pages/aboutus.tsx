@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderFooter from '../../layouts/HeaderFooter';
+import HeaderFooter from '../layouts/HeaderFooter';
 import { Empty } from 'antd';
 import Head from 'next/head';
 
